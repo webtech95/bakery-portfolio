@@ -1,0 +1,122 @@
+/* Navbar */
+.Navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 15px 30px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Sticky Header */
+.header-scroller {
+    background-color: #fdb822;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.header-scroller .Header-btn{
+    color: black;
+    background-color: #fff;
+}
+
+/* Logo */
+.Header-Logo {
+    height: 80px;
+    border-radius: 50%;
+}
+
+/* Navigation Menu */
+.Nav {
+    display: flex;
+    gap: 20px;
+}
+
+.Nav a {
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-family: Prata;
+    transition: color 0.3s ease;
+}
+
+.Nav a:hover {
+    color: #fdb822;
+}
+
+/* Buy Now Button */
+.Header-btn {
+    font-size: 16px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #fdb822;
+    transition: background 0.3s ease;
+}
+
+.Header-btn:hover {
+    background-color: #edac21;
+}
+
+/* Toggle Button */
+.menu-toggle {
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+    color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .Nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: white;
+        text-align: center;
+        padding: 20px 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .Nav.open {
+        display: flex;
+    }
+
+    .Nav a {
+        display: block;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .Header-btn {
+        display: none;
+    }
+}
+
+/* Small Screens */
+@media (max-width: 480px) {
+    .Header-Logo {
+        width: 100px;
+    }
+
+    .menu-toggle {
+        font-size: 24px;
+    }
+}
