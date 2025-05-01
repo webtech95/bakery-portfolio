@@ -12,6 +12,9 @@ import { ThemeContext } from "./consumer";
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { theme, toggleTheme } = useContext(ThemeContext);
+
+
 
     useEffect(() => {
         const handleScroll = () => {
@@ -21,58 +24,66 @@ const Header = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    const { theme, toggleTheme } = useContext(ThemeContext);
 
-
-
-
-
-
+    const color = {
+        color: theme === 'light' ? '#000' : '#fff'
+    }
 
 
     return (
-        <>
-            <header className={`Navbar ${isScrolled ? "header-scroller" : ""}`}>
-                <div className="nav-container">
-                    {/* Logo */}
-                    <Link to="/" className="logo-container" onClick={() => setMenuOpen(false)}>
-                        <img className="Header-Logo" src={Logo} alt="Logo" />
-                    </Link>
+        <div >
+            < div >
+                <header className={`Navbar ${isScrolled ? "header-scroller" : ""}`}
+                >
+                    <div className="nav-container">
+                        {/* Logo */}
+                        <Link to="/" className="logo-container" onClick={() => setMenuOpen(false)}>
+                            <img className="Header-Logo" src={Logo} alt="Logo" />
+                        </Link>
 
-                    {/* Mobile Toggle Button */}
-                    <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-                        {menuOpen ? "✖" : "☰"}
+                        {/* Mobile Toggle Button */}
+                        <div style={color} className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
+                            {menuOpen ? "✖" : "☰"}
+                        </div>
+
+                        {/* Navigation Menu */}
+                        <nav className={`Nav ${menuOpen ? "open" : ""}`}>
+                            <Link style={color} to="/" onClick={() => setMenuOpen(false)}>Home</Link >
+                            <Link style={color} to="/service" onClick={() => setMenuOpen(false)}>Our Services</Link>
+                            <Link style={color} to="/testimonials" onClick={() => setMenuOpen(false)}>Review</Link>
+                            <Link style={color} to="/product" onClick={() => setMenuOpen(false)}>Product</Link>
+                            <Link style={color} to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
+                        </nav>
+
+
+                        {/* Buy Now Button (Hidden on Mobile) */}
+                        <a style={{
+                            background: theme === 'light' ? '#fff' : '#000',
+                            color: theme === 'light' ? '#000' : '#fff'
+                        }} href="#" ><button style={color} className="Header-btn">Buy Now</button></a>
+
+
+
                     </div>
-
-                    {/* Navigation Menu */}
-                    <nav className={`Nav ${menuOpen ? "open" : ""}`}>
-                        <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-                        <Link to="/service" onClick={() => setMenuOpen(false)}>Our Services</Link>
-                        <Link to="/testimonials" onClick={() => setMenuOpen(false)}>Review</Link>
-                        <Link to="/product" onClick={() => setMenuOpen(false)}>Product</Link>
-                        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-                    </nav>
-
-                    {/* Buy Now Button (Hidden on Mobile) */}
-                    <a href="#" className="Header-btn">Buy Now!</a>
-                </div>
-            </header>
+                </header>
+            </div >
 
             {/* Page Routes */}
-            <Routes>
+            < Routes >
                 <Route path="/" element={<Home />} />
                 <Route path="/service" element={<Services />} />
                 <Route path="/testimonials" element={<Testimonials />} />
                 <Route path="/product" element={<Product />} />
                 <Route path="/contact" element={<Contact />} />
-            </Routes>
+            </Routes >
 
-            <div>
-                <h1>Current Theme: {theme}</h1>
-                <button onClick={toggleTheme}>Toggle Theme</button>
-            </div>
+            <button className="toggle-btn" onClick={toggleTheme}>
+                {/* {theme === 'light' ? "✖" : "☰"} */}
+                {theme === 'light' ? '🌑' : '🌙 '}
+            </button>
+        </div >
 
-        </>
+
 
 
     );

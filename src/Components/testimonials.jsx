@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./testimonial.css";
 import testimonials1 from "../images/testimonial-1-180x180.jpg"
 import testimonials2 from "../images/testimonial-2-180x180 copy.jpg"
 import testimonials3 from "../images/testimonial-3-180x180 copy.jpg"
+import { ThemeContext } from "./consumer";
 
 
 const Testimonials = () => {
@@ -26,6 +27,14 @@ const Testimonials = () => {
         }
     ];
 
+    const { theme } = useContext(ThemeContext);
+
+
+    const color = {
+        color: theme === 'light' ? '#000' : '#fff'
+    }
+
+
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % testimonials.length);
@@ -39,10 +48,12 @@ const Testimonials = () => {
             <h2>Clients' Testimonials</h2>
             <h4>What others say about us</h4>
             <div className="testimonials-carousel">
-                <div className="testimonial-slide slide-animation">
+                <div className="testimonial-slide slide-animation" style={{
+                    background: theme === 'light' ? '#fff' : '#000',
+                }}>
                     <img src={testimonials[currentIndex].img} alt={testimonials[currentIndex].author} width="100" height="100" />
-                    <p>"{testimonials[currentIndex].quote}"</p>
-                    <h4>-{testimonials[currentIndex].author}</h4>
+                    <p style={color}>"{testimonials[currentIndex].quote}"</p>
+                    <h4 style={color}>-{testimonials[currentIndex].author}</h4>
                 </div>
             </div>
         </section>

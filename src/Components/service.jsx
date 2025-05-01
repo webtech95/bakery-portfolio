@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./service.css";
+import { ThemeContext } from "./consumer";
 
 const Services = () => {
     const services = [
@@ -40,15 +41,23 @@ const Services = () => {
             description: "Let us make your big day even sweeter with beautifully crafted wedding cakes and desserts tailored to your taste."
         }
     ];
+    const { theme } = useContext(ThemeContext);
+
+
+    const color = {
+        color: theme === 'light' ? '#000' : '#fff'
+    }
 
     return (
-        <section id="Service" className="">
-            <div className="Our-service">
-                <h2>Our Service</h2>
-                <h3>covered in these areas</h3>
+        <section id="Service" >
+            <div className="Our-service" style={color}>
+                <h2 style={color}>Our Service</h2>
+                <h3 style={color}>covered in these areas</h3>
                 <div className="services-grid">
                     {services.map((service, index) => (
-                        <div className="service-card" key={index}>
+                        <div className="service-card" key={index} style={{
+                            background: theme === 'light' ? '#fff' : '#000',
+                        }}>
                             <img width="75" height="75" src={service.img} alt={service.alt} />
                             <h3>{service.title}</h3>
                             <p>{service.description}</p>

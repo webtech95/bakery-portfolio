@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, {useContext, useState } from "react";
 import "./product.css";
 import prduct1 from "../images/Ajwain cookies.jpg";
 import prduct2 from "../images/Badam butter ccokies.jpg";
@@ -17,9 +17,13 @@ import prduct13 from "../images/Mango cookies.jpg";
 import prduct14 from "../images/Orange cookies.jpg";
 import prduct15 from "../images/Peanut cookies.jpg";
 import prduct16 from "../images/Til cookies.jpg";
+import { ThemeContext } from "./consumer";
 
 const Product = () => {
     const [showAll, setShowAll] = useState(false);
+    
+    const { theme } = useContext(ThemeContext);
+
 
     const product = [
         { img: prduct1 }, { img: prduct2 }, { img: prduct3 }, { img: prduct4 },
@@ -30,16 +34,21 @@ const Product = () => {
 
     const visibleProducts = showAll ? product : product.slice(0, 8);
 
+
+    const color = {
+        color: theme === 'light' ? '#000' : '#fff'
+    }
+
     return (
         <section className="Bakery-Product">
             <h2>Our latest bakery products</h2>
             <h4>Check some of our best products and feel the great passion for food</h4>
             <div className="navlinks">
-                <a className="active" href="#">All</a>
-                <a href="#">Bread</a>
-                <a href="#">Cakes</a>
-                <a href="#">Pastries</a>
-                <a href="#">Cupcakes</a>
+                <a style={color} className="active" href="#">All</a>
+                <a style={color} href="#">Bread</a>
+                <a style={color} href="#">Cakes</a>
+                <a style={color} href="#">Pastries</a>
+                <a style={color} href="#">Cupcakes</a>
             </div>
             <div className="product-grid">
                 {visibleProducts.map((product, index) => (
@@ -48,7 +57,7 @@ const Product = () => {
                     </div>
                 ))}
             </div>
-            <button className="see-all-btn" onClick={() => setShowAll(!showAll)}>
+            <button className="see-all-btn" onClick={() => setShowAll(!showAll)} style={color}>
                 {showAll ? "Show Less" : "See More"}
             </button>
 

@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./contact.css";
 import img1 from "../images/icons8-facebook-circled.gif"
 import img2 from "../images/icons8-instagram-logo-50.png"
 import img3 from "../images/icons8-linkedin-circled.gif"
 import img4 from "../images/icons8-x-50.png"
+import { ThemeContext } from "./consumer";
 
 
 const Contact = () => {
+    const { theme } = useContext(ThemeContext);
+    const color = {
+        color: theme === 'light' ? '#000' : '#fff'
+    }
+    const dark = {
+        background: theme === 'light' ? '#fff' : '#000'
+    }
+
+    const themeStyle = {
+        background: theme === 'light' ? '#fff' : '#000',
+        color: theme === 'light' ? '#000' : '#fff',
+    };
+
     return (
         <>
             {/* Google Map */}
@@ -17,13 +31,13 @@ const Contact = () => {
             ></iframe>
 
             {/* Contact Form */}
-            <div className="contact-container">
+            <div className="contact-container" >
                 <form className="contact-form">
-                    <input type="text" placeholder="Name" required />
-                    <input type="text" placeholder="Phone" required />
-                    <input type="email" placeholder="Email" required />
-                    <textarea placeholder="Message" required></textarea>
-                    <button type="submit">SEND</button>
+                    <input type="text" placeholder="Name" required style={themeStyle} />
+                    <input type="text" placeholder="Phone" required style={themeStyle} />
+                    <input type="email" placeholder="Email" required style={themeStyle} />
+                    <textarea placeholder="Message" required style={themeStyle}></textarea>
+                    <button type="submit" style={ color}>SEND</button>
                 </form>
             </div>
 
@@ -46,17 +60,17 @@ const Contact = () => {
                     </div>
                     <div className="contact-info">
                         <h3>CONTACT US</h3>
-                        <p>📞 0 800 123 456 88</p>
-                        <p>📍 30 Hampton Road, Southampton, NY 11968</p>
-                        <p>📧 info@bakerytheme.com</p>
-                        <p>🌐 www.bakerytheme.com</p>
+                        <p>📞 1234**5678</p>
+                        <p>📍 Gali No-07 Kanti Nagar Ext. Delhi- 10031</p>
+                        <p>📧 info@bakery.com</p>
+                        <p>🌐 www.bakery.com</p>
                     </div>
                 </div>
             </footer>
 
             {/* Copyright */}
             <div>
-                <p className="copyright">Copyright © 2015-2018 Bakery WordPress Theme by Milingona.</p>
+                <p className="copyright">Copyright © 2025-2026 Bakery React Theme by Afzal Qureshi.</p>
             </div>
         </>
     );

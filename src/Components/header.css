@@ -1,4 +1,5 @@
-/* Navbar */
+/* Navbar  */
+
 .Navbar {
     position: fixed;
     top: 0;
@@ -24,9 +25,9 @@
 
 
 
-.header-scroller .Header-btn{
-    color: black;
-    background-color: #fff;
+.header-scroller .Header-btn {
+    /* color: black; */
+    background-color: rgb(183, 198, 160) !important;
 }
 
 /* Logo */
@@ -44,7 +45,7 @@
 .Nav a {
     font-size: 18px;
     text-decoration: none;
-    color: black;
+    /* color: black; */
     font-family: Prata;
     transition: color 0.3s ease;
 }
@@ -54,13 +55,18 @@
 }
 
 /* Buy Now Button */
+
+header a {
+    border-radius: 8px;
+}
+
 .Header-btn {
     font-size: 16px;
     color: white;
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 8px;
-    background-color: #fdb822;
+    background-color: #fdb822 !important;
     transition: background 0.3s ease;
 }
 
@@ -74,6 +80,14 @@
     font-size: 40px;
     cursor: pointer;
     color: black;
+}
+
+.toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 15px;
+    font-size: 30px;
+    border-radius: 100%;
 }
 
 /* Responsive Design */
@@ -113,7 +127,7 @@
 /* Small Screens */
 @media (max-width: 480px) {
     .Header-Logo {
-        width: 100px;
+        width: 75px;
     }
 
     .menu-toggle {
