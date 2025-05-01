@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/bakery-portfolio/static/css/main.099900ec.css",
+    "main.js": "/bakery-portfolio/static/js/main.bb25f2f6.js",
+    "static/js/453.c29c8fae.chunk.js": "/bakery-portfolio/static/js/453.c29c8fae.chunk.js",
+    "static/media/Peanut cookies.jpg": "/bakery-portfolio/static/media/Peanut cookies.2a8792c7b177702a0cdf.jpg",
+    "static/media/Orange cookies.jpg": "/bakery-portfolio/static/media/Orange cookies.8c4efe18d823bebe4996.jpg",
+    "static/media/Fruit machine.jpg": "/bakery-portfolio/static/media/Fruit machine.2bd9ea031af974f685cb.jpg",
+    "static/media/Badam cookies.jpg": "/bakery-portfolio/static/media/Badam cookies.bb8568885df0f9c3be0e.jpg",
+    "static/media/Jam cookies.jpg": "/bakery-portfolio/static/media/Jam cookies.d124cf8080a4bd45b0ec.jpg",
+    "static/media/Lite butter cookies.jpg": "/bakery-portfolio/static/media/Lite butter cookies.ca413898ab6487fee624.jpg",
+    "static/media/Butter cookies.jpg": "/bakery-portfolio/static/media/Butter cookies.5b98f49be871cec6e193.jpg",
+    "static/media/Coconut cookies.jpg": "/bakery-portfolio/static/media/Coconut cookies.835457df41b67aa7cb1e.jpg",
+    "static/media/Badam butter ccokies.jpg": "/bakery-portfolio/static/media/Badam butter ccokies.7446425ae32560d44c3e.jpg",
+    "static/media/Badam pista cookies.jpg": "/bakery-portfolio/static/media/Badam pista cookies.0587a644409c3721b8a2.jpg",
+    "static/media/Mango cookies.jpg": "/bakery-portfolio/static/media/Mango cookies.f16d0b1e78759dbcaf27.jpg",
+    "static/media/Heart butter cookies.jpg": "/bakery-portfolio/static/media/Heart butter cookies.6f84ab209f35fdcc7288.jpg",
+    "static/media/Ajwain cookies.jpg": "/bakery-portfolio/static/media/Ajwain cookies.3dfebdbd816d855de280.jpg",
+    "static/media/Til cookies.jpg": "/bakery-portfolio/static/media/Til cookies.a2e6daf270650687e8e9.jpg",
+    "static/media/Kaju cookies.jpg": "/bakery-portfolio/static/media/Kaju cookies.59d9f9b7dbe6bd530fdb.jpg",
+    "static/media/Jeera cookies.jpg": "/bakery-portfolio/static/media/Jeera cookies.97c0eda0f866a17ec903.jpg",
+    "static/media/Logo.jpg": "/bakery-portfolio/static/media/Logo.c16f25f270cce73fb7a0.jpg",
+    "static/media/icons8-facebook-circled.gif": "/bakery-portfolio/static/media/icons8-facebook-circled.e4f997a1b32fc6106aa3.gif",
+    "index.html": "/bakery-portfolio/index.html",
+    "main.099900ec.css.map": "/bakery-portfolio/static/css/main.099900ec.css.map",
+    "main.bb25f2f6.js.map": "/bakery-portfolio/static/js/main.bb25f2f6.js.map",
+    "453.c29c8fae.chunk.js.map": "/bakery-portfolio/static/js/453.c29c8fae.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.099900ec.css",
+    "static/js/main.bb25f2f6.js"
+  ]
+}
