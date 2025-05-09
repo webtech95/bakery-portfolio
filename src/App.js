@@ -3,9 +3,10 @@ import './App.css';
 import Contact from './Components/contact';
 import Header from './Components/header';
 import Product from './Components/product';
-import Services from './Components/service';
+// import Services from './Components/service';
 import Testimonials from './Components/testimonials';
 import { ThemeContext } from './Components/consumer';
+import AboutBakery from './Components/about';
 
 function App() {
   const { theme } = useContext(ThemeContext);
@@ -20,9 +21,11 @@ function App() {
       >
 
         <Header />
-        <Services />
-        <Product />
-        <Testimonials />
+        {/* <Services /> */}
+        {/* <AboutBakery /> */}
+        {/* <Testimonials /> */}
+
+        {/* <Product /> */}
         <Contact />
 
       </div>

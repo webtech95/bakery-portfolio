@@ -5,6 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { HashRouter } from 'react-router-dom';
 import { ThemeProvider } from './Components/consumer';
+import { CartProvider } from './Components/CartSlice';
+import { Provider } from 'react-redux';
+import store from './Components/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,9 +15,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 
   <HashRouter>
-    <ThemeProvider>
-      <App />
-    </ThemeProvider>
+    <Provider store={store}>
+      <CartProvider>
+        <ThemeProvider>
+          <App />
+        </ThemeProvider>
+      </CartProvider>
+    </Provider>
   </HashRouter>
 
 );

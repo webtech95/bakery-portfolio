@@ -22,11 +22,13 @@
 }
 
 .testimonial-slide img {
+    margin: auto;
     max-width: 100px;
     border-radius: 50%;
     border: 5px solid #e1c0c0;
     margin-bottom: 10px;
 }
+
 
 .testimonial-slide p {
     font-size: 16px;
