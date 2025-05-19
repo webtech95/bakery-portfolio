@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/bakery-portfolio/static/css/main.f9796c44.css",
-    "main.js": "/bakery-portfolio/static/js/main.f079ad9e.js",
+    "main.css": "/bakery-portfolio/static/css/main.f27ea6f7.css",
+    "main.js": "/bakery-portfolio/static/js/main.5fd99257.js",
     "static/js/453.c29c8fae.chunk.js": "/bakery-portfolio/static/js/453.c29c8fae.chunk.js",
     "static/media/about me.png": "/bakery-portfolio/static/media/about me.328e6b6fa9ef3685a4a9.png",
     "static/media/Peanut cookies.jpg": "/bakery-portfolio/static/media/Peanut cookies.2a8792c7b177702a0cdf.jpg",
@@ -23,12 +23,12 @@
     "static/media/Logo.jpg": "/bakery-portfolio/static/media/Logo.c16f25f270cce73fb7a0.jpg",
     "static/media/icons8-facebook-circled.gif": "/bakery-portfolio/static/media/icons8-facebook-circled.e4f997a1b32fc6106aa3.gif",
     "index.html": "/bakery-portfolio/index.html",
-    "main.f9796c44.css.map": "/bakery-portfolio/static/css/main.f9796c44.css.map",
-    "main.f079ad9e.js.map": "/bakery-portfolio/static/js/main.f079ad9e.js.map",
+    "main.f27ea6f7.css.map": "/bakery-portfolio/static/css/main.f27ea6f7.css.map",
+    "main.5fd99257.js.map": "/bakery-portfolio/static/js/main.5fd99257.js.map",
     "453.c29c8fae.chunk.js.map": "/bakery-portfolio/static/js/453.c29c8fae.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9796c44.css",
-    "static/js/main.f079ad9e.js"
+    "static/css/main.f27ea6f7.css",
+    "static/js/main.5fd99257.js"
   ]
 }
