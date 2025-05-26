@@ -1,10 +1,7 @@
 import React, { useContext } from "react";
 import "./contact.css";
-import img1 from "../images/icons8-facebook-circled.gif"
-import img2 from "../images/icons8-instagram-logo-50.png"
-import img3 from "../images/icons8-linkedin-circled.gif"
-import img4 from "../images/icons8-x-50.png"
-import { ThemeContext } from "./consumer";
+
+import { ThemeContext } from "./consumer"
 
 
 const Contact = () => {
@@ -12,11 +9,6 @@ const Contact = () => {
     const color = {
         color: theme === 'light' ? '#000' : '#fff'
     }
-   
-    const themeStyle = {
-        background: theme === 'light' ? '#fff' : '#000',
-        color: theme === 'light' ? '#000' : '#fff',
-    };
 
     return (
         <div className="perent-contact">
@@ -30,45 +22,15 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="contact-container" >
                 <form className="contact-form">
-                    <input type="text" placeholder="Name" required style={themeStyle} />
-                    <input type="text" placeholder="Phone" required style={themeStyle} />
-                    <input type="email" placeholder="Email" required style={themeStyle} />
-                    <textarea placeholder="Message" required style={themeStyle}></textarea>
+                    <input type="text" placeholder="Name" required />
+                    <input type="text" placeholder="Phone" required />
+                    <input type="email" placeholder="Email" required />
+                    <textarea placeholder="Message" required ></textarea>
                     <button type="submit" style={color}>SEND</button>
                 </form>
             </div>
 
-            {/* Footer Section */}
-            <footer>
-                <div className="footer-content">
-                    <div className="opening-hours">
-                        <h3>OPENING HOURS</h3>
-                        <p>Monday - Thursday: 8:00 - 16:00</p>
-                        <p>Friday - Saturday: 8:00 - 16:00</p>
-                        <p>Sunday: 8:00 - 16:00</p>
-                        <div className="social-icons">
-                            <a href="https://www.facebook.com/"><img src={img1} alt="facebook" /></a>
-                            <a href="https://www.instagram.com/"><img src={img2} alt="instagram" /></a>
-                            <a href="https://in.linkedin.com/"><img src={img3} alt="linkedin" /></a>
-                            <a href="https://x.com/i/flow/login?redirect_after_login=%2Ftgcindia">
-                                <img src={img4} alt="twitter" />
-                            </a>
-                        </div>
-                    </div>
-                    <div className="contact-info">
-                        <h3>CONTACT US</h3>
-                        <p>📞 1234**5678</p>
-                        <p>📍 Gali No-07 Kanti Nagar Ext. Delhi- 10031</p>
-                        <p>📧 info@bakery.com</p>
-                        <p>🌐 www.bakery.com</p>
-                    </div>
-                </div>
-            </footer>
 
-            {/* Copyright */}
-            <div>
-                <p className="copyright">Copyright © 2025-2026 Bakery React Theme by Afzal Qureshi.</p>
-            </div>
         </div>
     );
 };

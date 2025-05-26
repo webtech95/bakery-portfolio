@@ -18,108 +18,108 @@ import img14 from "../images/Orange cookies.jpg";
 import img15 from "../images/Peanut cookies.jpg";
 import img16 from "../images/Til cookies.jpg";
 import { ThemeContext } from "./consumer";
-import { CartContext } from "./CartSlice";
+import {  useCart } from "./cartContext";
 
 
 const Product = [
     {
         id: '1',
         name: 'Ajwain Cookies',
-        price: '$10',
-        oldprice: '$15',
+        price: '10',
+        oldprice: '15',
         image: img1
     },
     {
         id: '2',
         name: 'Badam Butter Cookies',
-        price: '$8',
-        oldprice: '$12',
+        price: '8',
+        oldprice: '12',
         image: img2
     },
     {
         id: '3',
         name: 'Badam Cookies',
-        price: '$11',
-        oldprice: '$13',
+        price: '11',
+        oldprice: '13',
         image: img3
     }, {
         id: '4',
         name: 'Badam Pista Cookies',
-        price: '$15',
-        oldprice: '$20',
+        price: '15',
+        oldprice: '20',
         image: img4
     }, {
         id: '5',
         name: 'Butter Cookies',
-        price: '$10',
-        oldprice: '$15',
+        price: '10',
+        oldprice: '15',
         image: img5
     }, {
         id: '6',
         name: 'Coconut Cookies',
-        price: '$12',
-        oldprice: '$15',
+        price: '12',
+        oldprice: '15',
         image: img6
     }, {
         id: '7',
         name: 'Fruit Cookies',
-        price: '$17',
-        oldprice: '$20',
+        price: '17',
+        oldprice: '20',
         image: img7
     }, {
         id: '8',
         name: 'Heart Butter Cookies',
-        price: '$15',
-        oldprice: '$18',
+        price: '15',
+        oldprice: '18',
         image: img8
     }, {
         id: '9',
         name: 'Jam Cookies',
-        price: '$10',
-        oldprice: '$12',
+        price: '10',
+        oldprice: '12',
         image: img9
     }, {
         id: '10',
         name: 'Jeera Cookies',
-        price: '$7',
-        oldprice: '$10',
+        price: '7',
+        oldprice: '10',
         image: img10
     }, {
         id: '11',
         name: 'Kju Cookies',
-        price: '$20',
-        oldprice: '$20',
+        price: '20',
+        oldprice: '20',
         image: img11
     }, {
         id: '12',
         name: 'Lite Butter Cookies',
-        price: '$18',
-        oldprice: '$20',
+        price: '18',
+        oldprice: '20',
         image: img12
     }, {
         id: '13',
         name: 'Mango Cookies',
-        price: '$12',
-        oldprice: '$15',
+        price: '12',
+        oldprice: '15',
         image: img13
     }, {
         id: '14',
         name: 'Orange Cookies',
-        price: '$8',
-        oldprice: '$10',
+        price: '8',
+        oldprice: '10',
         image: img14
     }, {
         id: '15',
         name: 'Peanut Cookies',
-        price: '$15',
-        oldprice: '$17',
+        price: '15',
+        oldprice: '17',
         image: img15
     },
     {
         id: '16',
         name: 'Til Cookies',
-        price: '$10',
-        oldprice: '$15',
+        price: '10',
+        oldprice: '15',
         image: img16
     }
 
@@ -128,9 +128,10 @@ const Product = [
 
 const ProductList = () => {
     const [showAll, setShowAll] = useState(false);
-    const { addToCart } = useContext(CartContext);
+    const { cart, addToCart } = useCart();
+
     const { theme } = useContext(ThemeContext);
-    const visibleProducts = showAll ? Product : Product.slice(0,4);
+    const visibleProducts = showAll ? Product : Product.slice(0, 4);
     const color = {
         color: theme === 'light' ? '#000' : '#fff'
     }
@@ -160,26 +161,14 @@ const ProductList = () => {
                         <p className="text-green-600 text-lg font-medium">Price: {product.price}</p>
                         <p className="text-gray-400 line-through mb-2">{product.oldprice}</p>
 
-                        {/* <Link
-                            to={`/product/${product.id}`}
-                            className="bg-gray-700 text-white py-2 px-4 rounded-lg w-full text-sm font-medium hover:bg-gray-800 transition mb-2"
-                        >
-                            Product Details
-                        </Link> */}
 
                         <button
                             className="bg-blue-600 text-white py-2 px-4 rounded-lg w-full text-sm font-medium hover:bg-blue-700 transition mb-2"
-                            onClick={() => addToCart(product)}
+                            onClick={() => addToCart({ ...product, quantity: 1 })}
                         >
                             Add to Cart
                         </button>
 
-                        {/* <a
-                            href="https://www.amazon.in/?&tag=googhydrabk1-21&ref=pd_sl_5szpgfto9i_e&adgrpid=155259813593&hvpone=&hvptwo=&hvadid=674893540034&hvpos=&hvnetw=g&hvrand=1995103091282016231&hvqmt=e&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9061662&hvtargid=kwd-64107830&hydadcr=14452_2316413&gad_source=1F"
-                            className="bg-yellow-400 text-white py-2 px-4 rounded-lg w-full text-sm font-medium hover:bg-yellow-500 transition"
-                        >
-                            Buy from Amazon
-                        </a> */}
                     </div>
                 ))}
             </div>

@@ -54,68 +54,7 @@
     border: 2px solid #d09e5b;
 }
 
-footer {
-    background-color: #303133;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    
-}
 
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    max-width: 1200px;
-    margin:  auto;
-}
-
-.footer-content h3 {
-    color: #ffff;
-    font-family: 'Prata';
-    font-size: 18px;
-    margin-bottom: 30px;
-    font-weight: 400;
-}
-
-.footer-content p {
-    color: #aaaa;
-    font-family: 'Rubik';
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 10px;
-}
-
-.opening-hours,
-.contact-info {
-    text-align: left;
-}
-
-.social-icons {
-    margin-top: 10px;
-    display: flex;
-}
-
-.social-icons img {
-    max-width: 40px;
-    padding: 5px;
-    border-radius: 100%;
-}
-
-.social-icons span {
-    margin-right: 10px;
-    font-size: 20px;
-}
-
-.copyright {
-    font-size: 14px;
-    margin: 0;
-    color: #fff;
-    background-color: #414141;
-    text-align: center;
-    font-family: 'Rubik';
-    padding: 10px;
-}
 
 
 
@@ -148,17 +87,13 @@ footer {
         justify-content: center;
     }
 
-    .footer-content {
-        text-align: center;
-    }
+   
 }
 
 /* Extra Small Devices */
 @media (max-width: 480px) {
 
-    iframe{
-        padding: 0 10px;
-    }
+   
     .contact-container {
         /* width: 100%; */
         padding: 20px;
@@ -175,7 +110,5 @@ footer {
         font-size: 16px;
     }
 
-    .footer-content {
-        text-align: center;
-    }
+   
 }

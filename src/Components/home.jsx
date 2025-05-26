@@ -1,4 +1,5 @@
 import AboutBakery from "./about";
+import Contact from "./contact";
 import ProductList from "./product";
 import Testimonials from "./testimonials";
 
@@ -9,6 +10,7 @@ function Home() {
             <AboutBakery />
             <Testimonials />
             <ProductList />
+            <Contact />
 
         </div>
     );
